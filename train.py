@@ -70,7 +70,7 @@ def main():
     model = LogisticRegression(C=args.C, max_iter=args.max_iter).fit(x_train, y_train)
 
     accuracy = model.score(x_test, y_test)
-    run.log("Accuracy", np.float(accuracy))
+    run.log("accuracy", np.float(accuracy))
     
     #Dump the model using joblib
     os.makedirs('./outputs', exist_ok=True)
